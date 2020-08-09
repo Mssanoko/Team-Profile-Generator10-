@@ -97,7 +97,33 @@ function init(){
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
+function createHtml() {
 
+    const htmlPage = render(employees);
+ 
+    if (!fs.existsSync(OUTPUT_DIR)){
+       console.log(`'output' folder does not exist. Creating it now ...`)
+       fs.mkdirSync(OUTPUT_DIR);
+    } else {
+       console.log(`output folder already exists.`);
+    }
+ 
+    fs.writeFile(outputPath, htmlPage, function (err) {
+       if (err) {
+            console.log(`Failed to create file - ${outputPath}. Error - ${err}`);
+       } else {
+          console.log(`Successfully created html file - ${outputPath}`);
+       }      
+    });
+ 
+ }
+ 
+ function main(){
+ 
+    addMember();
+ 
+ }
+ main();
 
 // After you have your html, you're now ready to create an HTML file using the HTML
 // returned from the `render` function. Now write it to a file named `team.html` in the
