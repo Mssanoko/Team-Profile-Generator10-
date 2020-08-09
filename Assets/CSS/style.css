@@ -1,0 +1,32 @@
+body{
+    position: absolute;
+    display: block;
+    width: 100%;
+    margin:auto;
+    font-family: 'Noto Sans SC', sans-serif;
+    background-size:cover;
+    background-repeat: no-repeat;
+  } 
+  
+  
+    .card-header {
+      background-color: rgb(26, 124, 236);
+      color: white
+  
+    }
+  
+    .card-body{
+      background-color:lightgray;
+  
+    }
+  
+    .jumbotron{
+      padding: 30px;
+      margin-bottom: 30px;
+      font-size: 21px;
+      font-weight: 200;
+      line-height: 2.1428571435;
+      color: white;
+      background-color: crimson
+    
+    }
